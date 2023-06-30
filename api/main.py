@@ -9,13 +9,13 @@ app = FastAPI()
     
 
 @app.get("/api/v1/forecast/qty")
-async def forecast(menu_group:Annotated[str, Form()],split_date: Annotated[str, Form()],num_weeks: Annotated[int, Form()]):
+async def forecast(menu_group:Annotated[str, Form()],num_weeks: Annotated[int, Form()]):
 
     menu_group_list = ["Chicken Katsu Don","Gyudon Aburi with Miso Mayo & Sambal Korek","Sei Sultan sambal rica","Spaghetti Bolognese Brulee"]
     #read csv file
 
 
-    predY = forecast_testing_data(menu_group = menu_group,split_date = split_date)
+    predY = forecast_testing_data(menu_group = menu_group,num_weeks=num_weeks)
     
     
 
