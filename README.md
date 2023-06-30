@@ -27,7 +27,7 @@ GET demand forecasting data using API above in POSTMAN by accessing port 5000:
     <img src="contents/api request in postman.png" alt="Model Architecture" height="300">
 </p>
 
-Or we can run the model using Uvicorn, by type the command below and get demand forecasting data using API above in POSTMAN by accessing port 8000:
+Or we can run the model using Uvicorn, by type the command below in terminal and get demand forecasting data using API above in POSTMAN by accessing port 8000:
 ```bash
 cd /api
 uvicorn main:app --reload
