@@ -22,9 +22,15 @@ docker build -t app-image-name .
 docker run -d --name container-name -p 5000:5000 app-image-name
 ```
 ### 2. Forecast the demand using API
-GET demand forecasting data using API above in POSTMAN:
+GET demand forecasting data using API above in POSTMAN by accessing port 5000:
 <p align="left">
     <img src="contents/api request in postman.png" alt="Model Architecture" height="300">
 </p>
+
+Or we can run the model using Uvicorn, by type the command below and get demand forecasting data using API above in POSTMAN by accessing port 8000:
+```bash
+cd /api
+uvicorn main:app --reload
+```
 
 
