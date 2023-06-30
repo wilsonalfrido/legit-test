@@ -6,6 +6,7 @@ Inside legit-test/api we could see the deployment script for this application. T
 API:
 - /test : to check whether api is running or not
 - /api/v1/forecast/qty: generate forecasting of qty_total per week for each group menu.
+  - asdasd
 
 ### 1. Create Docker container
 
