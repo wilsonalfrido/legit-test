@@ -21,6 +21,10 @@ docker build -t app-image-name .
 
 docker run -d --name container-name -p 5000:5000 app-image-name
 ```
+or you can get the image by pulling the image from docker hub:
+```bash
+docker pull wilsonalfrido/tech-test
+```
 ### 2. Forecast the demand using API
 GET demand forecasting data using API above in POSTMAN by accessing port 5000:
 <p align="left">
