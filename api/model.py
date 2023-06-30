@@ -18,10 +18,10 @@ def preprocessing_testing_data(menu_group):
     except:
         pass
 
-    #flash shale
+    
     patternFS = r'^((\[).+(\])).*'
     df['FS'] = df['menuname'].str.contains(patternFS)
-    #buy 1 get 1
+    
     patternB1G1 = r'(B1G1)'
     df['B1G1'] = df['menuname'].str.contains(patternB1G1)
     
@@ -51,7 +51,7 @@ def forecast_testing_data(menu_group,num_weeks):
 
     dTest =xgb.DMatrix(data=testX_scaled)
     model_xgb = xgb.Booster()
-    model_xgb.load_model(f"savedModel/{menu_group}.json")
+    model_xgb.load_model(f"savedmodel/{menu_group}.json")
     yPred = model_xgb.predict(dTest)
     mae = mean_absolute_error(testY, yPred)
 
